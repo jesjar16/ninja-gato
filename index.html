@@ -14,24 +14,20 @@
             // Achicar imagenes
             $('img').width('300');
              
-            $('img').click(function() {
-               // console.log('data-alt-src value is', $(this).attr('data-alt-src'));
+            $('img').click(function() {           
+               // Valores imágenes
+               var current_image = $(this).attr('src');
+               var alt_image = $(this).attr('data-alt-src');
+                
+               $(this).attr('src',alt_image);
+               $(this).attr('data-alt-src',current_image);
 
-                var ninja_image= $(this).attr('data-alt-src1');
-                var cat_image= $(this).attr('data-alt-src2');
-                var ninja_alt= $(this).attr('data-alt-alt1'); // alt alternativo
-                var cat_alt= $(this).attr('data-alt-alt2'); // alt alternativo
+               // Valores alt
+               var current_alt = $(this).attr('alt');
+               var alt_alt = $(this).attr('data-alt-alt');
 
-                if ($(this).attr('src') == ninja_image) {
-                    $(this).attr('src',cat_image);
-                    $(this).attr('alt',cat_alt);
-                }
-                else {
-                    $(this).attr('src',ninja_image);
-                    $(this).attr('alt',ninja_alt);
-                }
-               
-            
+               $(this).attr('alt',alt_alt);
+               $(this).attr('data-alt-alt',current_alt);
             
             });
          });
@@ -42,19 +38,19 @@
         <h3>From Ninja to Cat</h3>
         <p>Click on the ninja to reveal de cat!</p>
         <div class="row">
-            <img src='img/ninja0.png' data-alt-src1='img/ninja0.png' data-alt-src2='img/cat0.png' alt='Ninja, part 1' data-alt-alt1='Ninja, part 1' data-alt-alt2='Cat, part 1' />
+            <img src='img/ninja0.png' data-alt-src='img/cat0.png' alt='Ninja, part 1' data-alt-alt='Cat, part 1' />
         </div>
         <div class="row">
-            <img src='img/ninja1.png' data-alt-src1='img/ninja1.png' data-alt-src2='img/cat1.png' alt='Ninja, part 2' data-alt-alt1='Ninja, part 2' data-alt-alt2='Cat, part 2' />
+            <img src='img/ninja1.png' data-alt-src='img/cat1.png' alt='Ninja, part 2' data-alt-alt='Cat, part 2' />
         </div>
         <div class="row">
-            <img src='img/ninja2.png' data-alt-src1='img/ninja2.png' data-alt-src2='img/cat2.png' alt='Ninja, part 3' data-alt-alt1='Ninja, part 3' data-alt-alt2='Cat, part 3' />
+            <img src='img/ninja2.png' data-alt-src='img/cat2.png' alt='Ninja, part 3' data-alt-alt='Cat, part 3' />
         </div>
         <div class="row">
-            <img src='img/ninja3.png' data-alt-src1='img/ninja3.png' data-alt-src2='img/cat3.png' alt='Ninja, part 4' data-alt-alt1='Ninja, part 4' data-alt-alt2='Cat, part 4' />
+            <img src='img/ninja3.png' data-alt-src='img/cat3.png' alt='Ninja, part 4' data-alt-alt='Cat, part 4' />
         </div>
         <div class="row">
-            <img src='img/ninja4.png' data-alt-src1='img/ninja4.png' data-alt-src2='img/cat4.png' alt='Ninja, part 5' data-alt-alt1='Ninja, part 5' data-alt-alt2='Cat, part 5' />
+            <img src='img/ninja4.png' data-alt-src='img/cat4.png' alt='Ninja, part 5' data-alt-alt='Cat, part 5' />
         </div>
     </div>
 </body>
